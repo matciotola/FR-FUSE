@@ -1,6 +1,6 @@
 # A full-resolution training framework for Sentinel-2 image fusion
 
-[A full-resolution training framework for Sentinel-2 image fusion](https://ieeexplore.ieee.org/document/9553199) ([ArXiv](https://arxiv.org/abs/2111.08334)) is 
+[A full-resolution training framework for Sentinel-2 image fusion](https://ieeexplore.ieee.org/document/9553199) ([ArXiv](https://soon)) is 
 a deep learning method for Pansharpening based on unsupervised and full-resolution framework training.
 
 ## Cite FR-FUSE
@@ -30,7 +30,7 @@ terms of the license, as specified in the document [`LICENSE`](https://github.co
 (included in this package) 
 
 ## Prerequisites
-All the functions and scripts were tested on Windows and Ubuntu O.S., with these constrains:
+All the functions and scripts were tested on Windows and Ubuntu O.S., with these constraints:
 
 - Python 3.10.10 
 - PyTorch 2.0.0
@@ -42,13 +42,13 @@ the operation is not guaranteed with other configurations.
 
 - Install [Anaconda](https://www.anaconda.com/products/individual) and [git](https://git-scm.com/downloads) 
 - Create a folder in which save the algorithm
-- Download the algorithm and unzip it into the folder or, alternatively, from CLI:
+- Download the algorithm and unzip it into the folder or from CLI:
 
 ```
 git clone https://github.com/matciotola/FR-FUSE
 ```
 
-- Create the virtual environment with the `z_pnn_environment.yml`
+- Create the virtual environment with the fr_fuse_environment.yml`
 
 ```
 conda env create -n fr_fuse_env -f fr_fuse_environment.yml
@@ -64,16 +64,4 @@ conda activate fr_fuse_env
 
 ```
 python main.py -b10 example/10/New_York.tiff -b20 example/20/New_York.tiff -o ./Output_Example
-```
-
-### Testing
-The easiest command to use the algorithm on full resolution data:
-
-```
-python main.py -i path/to/file.mat -s sensor_name -m method
-```
-Several options are possible. Please refer to the parser help for more details:
-
-```
-python main.py -h
 ```
